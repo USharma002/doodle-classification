@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="interactive">
+  <canvas width="600px" height="600px"></canvas>
+  <button class="pushable" id="clear">
+    <span class="front">
+      Clear
+    </span>
+  </button>
+
+  <div class="results">
+  <h1 class="title">What I see</h1>
+  <div class="predictions" id="prediction-list">
+  </div>
+</div>
+
+</div>
+{% endblock %}

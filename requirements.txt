@@ -1,0 +1,6 @@
+gunicorn
+flask
+numpy
+matplotlib
+pillow
+tensorflow-cpu

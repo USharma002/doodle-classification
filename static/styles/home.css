@@ -1,0 +1,110 @@
+body {
+	background: rgb(34, 34, 34);
+	font-family: sans-serif;
+	text-align: center;
+	min-width: 700px;
+}
+.title{
+	position: relative;
+	margin: auto;
+	font-weight: 300;
+	color: white;
+	font-weight: bolder;
+	font-size: 48px;
+}
+.interactive{
+	position: absolute;
+	left:  50%;
+	transform: translate(-50%, 0%);
+	padding-top: 20px;
+}
+
+.results{
+	position: absolute;
+	width: 600px;
+	right: 0px;
+}
+
+canvas{
+	margin: 20px;
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0);
+	display: block;
+	border: 5px solid cyan;
+	box-shadow: 10px 10px 0px 0 rgb(0, 111, 159);
+  	cursor: crosshair;
+  	transition: 0.5s;
+}
+
+canvas:hover{
+	box-shadow: 10px 10px 0px 0 cyan;
+}
+
+button{
+	position: absolute;
+	top:  40px;
+	left: 0px;
+	margin: 20px;
+}
+
+.pushable {
+	background: hsl(340deg 100% 32%);
+	border-radius: 12px;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline-offset: 6px;
+	background-color: rgb(0, 111, 159);
+	transition: all 0.5s ease-out;
+	position: absolute;
+}
+.front {
+	display: block;
+	padding: 12px 42px;
+	border-radius: 12px;
+	font-size: 1.25rem;
+	background: hsl(345deg 100% 47%);
+	color: black;
+	transform: translateY(-15px);
+	background-color: cyan;
+}
+
+.pushable:active .front{
+	transform: translateY(-2px);
+}
+
+.front:hover{
+	background-color: rgb(172, 255, 255);
+}
+
+.predictions{
+	margin: 40px;
+	position: relative;
+	height: 620px;
+	overflow: auto;
+}
+
+.list-item{
+	width: 400px;
+	margin-top: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(34, 34, 34); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 111, 159); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: cyan;
+  border-radius: 5px;
+}

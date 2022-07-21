@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		let styles = ''
+		for(let i = 0; i < 400; i++){
+			styles = styles + '[indx="' + i + '"]{top: '+ i*70 + 'px }\n';
+		}
+
+		var styleSheet = document.createElement("style")
+		styleSheet.innerText = styles
+		document.head.appendChild(styleSheet)
+	</script>
+
+	<title>Doodle</title>
+</head>
+<body>
+	{% block content %}{% endblock %}
+	<script type="text/javascript" src="{{ 
+	url_for('static',filename='scripts/main.js') }}"></script>
+</body>
+</html>
